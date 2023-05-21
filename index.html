@@ -2,7 +2,7 @@
   <head>
     <title>Joe Berk - Full Stack Developer</title>
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
-    <script src="./resources/js/main.js"></script>
+    <script src="./resources/js/main.js" defer></script>
   </head>
   <body>
     <header>
@@ -10,16 +10,16 @@
             <img src="./resources/images/logo.png" class="logo">
             <ul class="nav-links">
                 <li>
-                    <a href="#">Experience</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a href="#">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
             <ul class="social-links">
@@ -36,100 +36,201 @@
             </ul>
         </nav>
         <div class="banner">
+            <canvas id="particle-canvas"></canvas>
             <div class="banner-content container">
                 <h1>Hi, my name is Joe Berk</h1>
                 <h2>I am a full-stack web and mobile developer and would love to help you build your next application</h2>
-                <a href="#" class="banner-btn">Let's Work Together</a>
+                <a href="#contact" class="banner-btn" id="banner-btn">Let's Work Together</a>
             </div>
-            <img src="./resources/images/profile pic.jpg">
+            <img src="./resources/images/profile-pic.jpg" class="profile-pic" alt="picture of Joe">
         </div>
     </header>
-    
-    <section class="experience container">
-        <h2>Experience</h2> 
-    </section>
-    <section class="skills container">
-        <h2>Skills</h2>
-        <div class="skill-container">
-                <div>
-                    <img src="./resources/images/html.png">
-                    <p>HTML 5</p>
+    <main>
+        <section class="experience container" id="experience">
+            <h2>Experience</h2>
+            <div class="tab-nav-container">
+                <div class="tab-nav">
+                    <a class="tab-btn-active">Elevate Web3</a>
+                    <a class="tab-btn">SoDead</a>
+                    <a class="tab-btn">Bodetree</a>
+                    <a class="tab-btn">McKinsey</a>
                 </div>
-                <div>
-                    <img src="./resources/images/css.png">
-                    <p>CSS</p>
+                <div id="Elevate Web3" class="experience-tab">
+                    <span class="experience-role">Founder </span>
+                    <span class="experience-company">@ Elevate Web3</span>
+                    <p>December 2020 - Present</p>
+                    <ul>
+                        <li>Advised upcoming NFT projects on launch strategy based on research and
+                            anticipation of market trends</li>
+                        <li>Saved an abandoned NFT project, launching multiple technology products
+                            and building up a $25K treasury</li>
+                        <li>Built financial models to drive sustainable tokenomics for upcoming
+                            cryptocurrencies</li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="./resources/images/javascript.png">
-                    <p>Javascript</p>
+                <div id="SoDead" class="experience-tab" style="display: none">
+                    <span class="experience-role">Re-Founder </span>
+                    <span class="experience-company">@ SoDead NFT</span>
+                    <p>January 2023 - May 2023</p>
+                    <ul>
+                        <li>Took over and turned around NFT project on Solana after original founder rugged the project 
+                            (ran away with all of the funds and technology), saving over 1,000 investors from fraud</li>
+                        <li>Designed trait-swapping platform as new primary revenue stream for SoDead, rebuilding project 
+                            treasury to over $25,000 in 4 months through trait sales and royalties</li>
+                        <li>Launched 8 technology products including gamified rewards system, art upgrade platform, customization platform, 
+                            trait store, rarity tool, mobile app, hyper casual Flappy Bat game, and new website</li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="./resources/images/node.png">
-                    <p>Node.JS</p>
+                <div id="Bodetree" class="experience-tab" style="display: none">
+                    <span class="experience-role">Executive VP </span>
+                    <span class="experience-company">@ BodeTree</span>
+                    <p>February 2019 - August 2019</p>
+                    <ul>
+                        <li>Developed and managed franchise sales process for multiple emerging brands, including
+                            strategy input on offerings, lead generation, and direct sales efforts to close deals</li>
+                        <li>Conducted weekly calls with CEO's of portfolio franchise brands, providing pipeline updates
+                            and offering strategic guidance to continuously improve effectiveness of sales efforts</li>
+                        <li>Redesigned entire franchise sales process for Tapout Fitness, including custom sales education
+                            portal development and SMS automation, improving discovery day conversions</li>
+                    </ul>
                 </div>
-        </div>
-    </section>
-    <section class="projects container">
-        <h2>Projects</h2>
-        <div class="cards">
-            <div class="project-card">
-                <img src="./resources/images/cup-of-joe-preview.JPG">
-                <h3>Cup of Joe Podcast Website</h3>
-                <p>This is a sample landing page for a podcast called "Cup of Joe"</p>
-                <div class="technology-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
+                <div id="McKinsey" class="experience-tab" style="display: none">
+                    <span class="experience-role">Consultant </span>
+                    <span class="experience-company">@ McKinsey & Company</span>
+                    <p>October 2017 - February 2019</p>
+                    <ul>
+                        <li>Conducted interviews with key stakeholders in large health system to
+                            develop more actionable categorization system for $10B accounts payable
+                            data, resulting in ~$1B of cost-cutting opportunities</li>
+                        <li>Analyzed accounts payable data for large health system in medical supplies
+                            category, identifying vendor consolidation opportunities to improve
+                            negotiating power and contract terms</li>
+                        <li>Improved data integrity and coding of marketing activities for large health
+                            system, enabling better visibility to shift spend towards most profitable
+                            channels</li>
+                    </ul>
                 </div>
-                <a href="#" class="card-btn">View Project</a>
             </div>
-            <div class="project-card">
-                <img src="./resources/images/cheatsheet-preview.JPG">
-                <h3>HTML & CSS Cheat Sheet</h3>
-                <p>This is a cheat sheet that gives an overview of common HTML/CSS tags and properties</p>
-                <div class="technology-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-                <a href="#" class="card-btn">View Project</a>
+        </section>
+        <section class="skills container" id="skills">
+            <h2>Skills</h2>
+            <div class="skill-container">
+                    <div>
+                        <img src="./resources/images/html.png">
+                        <p>HTML 5</p>
+                    </div>
+                    <div>
+                        <img src="./resources/images/css.png">
+                        <p>CSS</p>
+                    </div>
+                    <div>
+                        <img src="./resources/images/javascript.png">
+                        <p>Javascript</p>
+                    </div>
+                    <div>
+                        <img src="./resources/images/node.png">
+                        <p>Node.JS</p>
+                    </div>
             </div>
-            <div class="project-card">
-                <img src="./resources/images/brand-guidelines-preview.JPG">
-                <h3>Elevate - Brand Guidelines</h3>
-                <p>This is a sample style sheet and brand guidelines for Elevate Consulting</p>
-                <div class="technology-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
+        </section>
+        <section class="projects container" id="projects">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="project-card">
+                    <img src="./resources/images/cup-of-joe-preview.JPG">
+                    <h3>Cup of Joe Podcast Website</h3>
+                    <p>This is a sample landing page for a podcast called "Cup of Joe"</p>
+                    <div class="technology-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                    </div>
+                    <a href="#" class="card-btn">View Project</a>
                 </div>
-                <a href="#" class="card-btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="./resources/images/sodead-preview.JPG">
-                <h3>SoDead NFT Project Website</h3>
-                <p>This is a multi-page website created for an NFT project using Webflow</p>
-                <div class="technology-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
-                    <span>Webflow</span>
+                <div class="project-card">
+                    <img src="./resources/images/cheatsheet-preview.JPG">
+                    <h3>HTML & CSS Cheat Sheet</h3>
+                    <p>This is a cheat sheet that gives an overview of common HTML/CSS tags and properties</p>
+                    <div class="technology-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="#" class="card-btn">View Project</a>
                 </div>
-                <a href="#" class="card-btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="./resources/images/number-generator-preview.JPG">
-                <h3>Random Number Guessing Game</h3>
-                <p>This is a simple game that allows you to guess a random number against the computer</p>
-                <div class="technology-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
+                <div class="project-card">
+                    <img src="./resources/images/brand-guidelines-preview.JPG">
+                    <h3>Elevate - Brand Guidelines</h3>
+                    <p>This is a sample style sheet and brand guidelines for Elevate Consulting</p>
+                    <div class="technology-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="#" class="card-btn">View Project</a>
                 </div>
-                <a href="#" class="card-btn">View Project</a>
+                <div class="project-card">
+                    <img src="./resources/images/sodead-preview.JPG">
+                    <h3>SoDead NFT Project Website</h3>
+                    <p>This is a multi-page website created for an NFT project using Webflow</p>
+                    <div class="technology-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>Webflow</span>
+                    </div>
+                    <a href="#" class="card-btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="./resources/images/number-generator-preview.JPG">
+                    <h3>Random Number Guessing Game</h3>
+                    <p>This is a simple game that allows you to guess a random number against the computer</p>
+                    <div class="technology-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                    </div>
+                    <a href="#" class="card-btn">View Project</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="contact container">
-        <h2>Contact Me</h2> 
-    </section>
+        </section>
+        <section class="contact container" id="contact">
+            <h2>Contact Me</h2>
+            <form action="" method="" id="contact-form">
+                <div class="contact-col-1">
+                    <h3>Let's Talk!</h3>
+                    <p>I'd love to help you with your next project! Send me a message with your contact details and what you are looking to build:</p>
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="full-name" id="full-name" required >
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required >
+                    <br>
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" id="phone" required >
+                    <br>
+                    <label for="phone">What can I help you with?</label>
+                    <textarea rows="5" cols="20"></textarea>
+                    <input type="submit">
+                </div>
+                <div class="contact-col-2">
+                    <img src="./resources/images/profile-pic.jpg">
+                </div>
+            </form> 
+        </section>
+    </main>
+    <footer>
+        <small>&copy; Copyright 2023, Joe Berk</small>
+        <ul class="social-links">
+            <li>
+                <a href="#">
+                    <img src="./resources/images/icons8-linkedin-50.png" alt="linkedin">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./resources/images/icons8-github-50.png" alt="github">
+                </a>
+            </li>
+        </ul>
+    </footer>
   </body>
 </html>

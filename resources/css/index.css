@@ -6,6 +6,10 @@
     font-family: garetheavy;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'garetbook';
     src: url('../fonts/garet-book-webfont.woff2') format('woff2'),
@@ -104,8 +108,24 @@ header h2 {
     padding: 1rem;
 }
 
+.banner-content, .banner img {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 .banner {
     margin-top: 5rem;
+    margin-bottom: 2.5rem;
     max-width: 80%;
     display: flex;
     padding: 0 5rem;
@@ -113,7 +133,7 @@ header h2 {
     justify-content: space-between;
 }
 
-.banner img {
+.banner .profile-pic {
     width: 250px;
     height: auto;
     border-radius: 50%;
@@ -125,12 +145,33 @@ header h2 {
 }
 
 .banner-btn {
-    background-color: #0e5bd7;
     text-transform: uppercase;
     padding: 2rem 3rem;
     font-size: 1.25rem;
     text-decoration: none;
     border-radius: 1rem;
+    border: 5px solid #0e5bd7;
+    background-image: linear-gradient(to right, #0e5bd7 0%, #0e5bd7 0%);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-btn:hover{
+  background-size: 100% 100%;
+}
+
+#particle-canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 section {
@@ -143,6 +184,66 @@ section h2 {
     text-transform: uppercase;
     text-align: center;
     border-top: 0.5rem solid #0e5bd7;
+}
+
+.tab-nav-container {
+    display:flex;
+    margin-top: 4rem;
+}
+
+.tab-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tab-nav a {
+    font-family: garetbook;
+}
+
+.experience-tab {
+    padding-left: 3rem;
+    width: 500px;
+}
+
+.experience-tab ul {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.experience-role {
+    font-size: 1.5rem;
+}
+
+.experience-company {
+    font-size: 1.5rem;
+    color:#0e5bd7;
+}
+
+.experience-tab p {
+    padding-top: 0.5rem;
+}
+
+.experience-tab li {
+    font-family: garetbook;
+    padding-top: 0.5rem;
+}
+
+.tab-btn {
+    padding: 1rem;
+    cursor: pointer;
+    border-left: 1px solid #6b717c;
+}
+
+.tab-btn-active {
+    background-color: #282a2e;
+    padding: 1rem;
+    cursor: pointer;
+    border-left: 3px solid #0e5bd7;
+}
+
+.tab-btn:hover {
+    background-color: #282a2e;
 }
 
 .skill-container {
@@ -215,7 +316,88 @@ section h2 {
     font-size: 0.8rem;
     font-family: garetbook;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     display: inline-flex;
     margin-top: 0.25rem;
+}
+
+#contact-form {
+    background-color: #1a2332;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    overflow: hidden;
+    margin: 3rem;
+}
+
+#contact-form p {
+    margin-bottom: 1rem;
+}
+
+#contact-form img {
+    max-width: 600px;
+    width: auto;
+    height:100%;
+    border-radius: inherit;
+}
+
+@media only screen and (max-width: 925px) {
+    #contact-form img { 
+        display: none;
+    }
+    #contact-form {
+        grid-template-columns: 1fr;
+        margin: 3rem 1.5rem;
+    }
+}
+
+.contact-col-1 {
+    padding: 2rem;
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+}
+
+.contact-col-1 label {
+    margin-top: 1rem;
+}
+
+#contact-form input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #6b717c;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: garetbook;
+}
+
+#contact-form textarea {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 2px solid #6b717c;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: garetbook;
+}
+
+#contact-form input[type="submit"] {
+    background-color: #0e5bd7;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    margin-top: 1rem;
+    font-family: garetheavy;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #1a2332;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer li {
+    display: inline-flex
 }
