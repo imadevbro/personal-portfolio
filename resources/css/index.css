@@ -86,6 +86,19 @@ nav a {
     padding-top: 0.5rem;
 }
 
+
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav li {
+        padding: 0.5rem;
+    }
+    .social-links {
+        display: none;
+    }
+}
+
 header h2 {
     font-family: garetbook;
 }
@@ -97,6 +110,7 @@ header h2 {
 
 .social-links {
     margin-right: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .social-links img {
@@ -150,15 +164,12 @@ header h2 {
     font-size: 1.25rem;
     text-decoration: none;
     border-radius: 1rem;
-    border: 5px solid #0e5bd7;
-    background-image: linear-gradient(to right, #0e5bd7 0%, #0e5bd7 0%);
+    background-color: #0e5bd7;
+    background-image: linear-gradient(to right, #062d6c 0%, #062d6c 0%);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size 0.3s ease-in-out;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .banner-btn:hover{
@@ -203,7 +214,7 @@ section h2 {
 
 .experience-tab {
     padding-left: 3rem;
-    width: 500px;
+    max-width: 500px;
 }
 
 .experience-tab ul {
@@ -246,11 +257,35 @@ section h2 {
     background-color: #282a2e;
 }
 
+@media only screen and (max-width: 500px) {
+    .tab-nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab-nav {
+        flex-direction: row;
+        overflow: scroll;
+        margin-bottom: 2rem;
+    }
+    .tab-btn {
+        border-top: 1px solid #6b717c;
+        border-left: none;
+    }
+    .tab-btn-active {
+        border-left:none;
+        border-top: 3px solid #0e5bd7;
+    }
+    .experience-tab {
+        padding: 0rem;
+    }
+}
+
 .skill-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1000px;
 }
 
 .skill-container div {
@@ -297,13 +332,22 @@ section h2 {
 }
 
 .card-btn {
-    background-color: #0e5bd7;
     text-transform: uppercase;
     padding: 1.5rem 0rem;
     text-decoration: none;
     border-radius: 1rem;
     text-align: center;
     margin-top: 2rem;
+    background-color: #0e5bd7;
+    background-image: linear-gradient(to right, #062d6c 0%, #062d6c 0%);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s ease-in-out;
+}
+
+.card-btn:hover{
+    background-size: 100% 100%;
 }
 
 .technology-tags {
@@ -388,6 +432,7 @@ section h2 {
     margin-top: 1rem;
     font-family: garetheavy;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 footer {
