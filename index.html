@@ -7,10 +7,11 @@
   </head>
   <body>
     <header>
-        <nav>
-            <img src="./resources/images/logo.png" class="logo">
+        <!-------------- Navigation Bar -------------->
+        <nav role="navigation">
+            <img src="./resources/images/logo.png" class="logo" alt="logo">
             <div id="nav-menus">
-                <ul class="nav-links">
+                <ul class="nav-links" aria-label="Website Sections">
                     <li>
                         <a href="#experience">Experience</a>
                     </li>
@@ -24,7 +25,7 @@
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <ul class="social-links">
+                <ul class="social-links" aria-label="Social Links">
                     <li>
                         <a href="https://www.linkedin.com/in/joeberkowitz1/" target="_blank">
                             <img src="./resources/images/icons8-linkedin-50.png" alt="linkedin">
@@ -37,12 +38,13 @@
                     </li>
                 </ul>
             </div>
-            <div id="icon-container">
+            <div id="icon-container" role="button" aria-label="Toggle Navigation Menu">
                 <img src="./resources/images/icons8-menu-30.png" alt="menu icon" >
             </div>
         </nav>
-        <div class="banner">
-            <canvas id="particle-canvas"></canvas>
+        <!-------------- Jumbotron / Banner -------------->
+        <div class="banner" role="banner">
+            <canvas id="particle-canvas" role="presentation"></canvas>
             <div class="banner-content container">
                 <h1>Hi, my name is Joe Berk</h1>
                 <h2>I am a full-stack web and mobile developer and would love to help you build your next application</h2>
@@ -52,14 +54,15 @@
         </div>
     </header>
     <main>
-        <section class="experience container" id="experience">
+        <!-------------- Experience Section -------------->
+        <section class="experience container reveal" id="experience" aria-label="Experience Section">
             <h2>Experience</h2>
             <div class="tab-nav-container">
-                <div class="tab-nav">
-                    <a class="tab-btn-active">Elevate Web3</a>
-                    <a class="tab-btn">SoDead</a>
-                    <a class="tab-btn">Bodetree</a>
-                    <a class="tab-btn">McKinsey</a>
+                <div class="tab-nav" role="tablist" aria-label="Toggle Experience Content">
+                    <a class="tab-btn-active" role="tab">Elevate Web3</a>
+                    <a class="tab-btn" role="tab">SoDead</a>
+                    <a class="tab-btn" role="tab">Bodetree</a>
+                    <a class="tab-btn" role="tab">McKinsey</a>
                 </div>
                 <div id="Elevate Web3" class="experience-tab">
                     <span class="experience-role">Founder </span>
@@ -118,97 +121,100 @@
                 </div>
             </div>
         </section>
-        <section class="skills container" id="skills">
+        <!-------------- Skills Section -------------->
+        <section class="skills container reveal" id="skills" aria-label="Skills Section">
             <h2>Skills</h2>
             <div class="skill-container">
                     <div>
-                        <img src="./resources/images/html.png">
+                        <img src="./resources/images/html.png" alt="HTML 5 Logo">
                         <p>HTML 5</p>
                     </div>
                     <div>
-                        <img src="./resources/images/css.png">
+                        <img src="./resources/images/css.png" alt="CSS Logo">
                         <p>CSS</p>
                     </div>
                     <div>
-                        <img src="./resources/images/javascript.png">
+                        <img src="./resources/images/javascript.png" alt="JavaScript Logo">
                         <p>JavaScript</p>
                     </div>
                     <div>
-                        <img src="./resources/images/node.png">
+                        <img src="./resources/images/node.png" alt="Node.js Logo">
                         <p>Node.js</p>
                     </div>
                     <div>
-                        <img src="./resources/images/react.png">
+                        <img src="./resources/images/react.png" alt="React Logo">
                         <p>React</p>
                     </div>
                     <div>
-                        <img src="./resources/images/postgres.png">
+                        <img src="./resources/images/postgres.png" alt="PostgreSQL Logo">
                         <p>PostgreSQL</p>
                     </div>
             </div>
         </section>
-        <section class="projects container" id="projects">
+        <!-------------- Projects Section -------------->
+        <section class="projects container reveal" id="projects" aria-label="Cards with each project completed">
             <h2>Projects</h2>
-            <div class="cards">
+            <div class="cards" role="group" aria-label="Project Cards">
                 <div class="project-card">
-                    <img src="./resources/images/cup-of-joe-preview.JPG">
+                    <img src="./resources/images/cup-of-joe-preview.JPG" alt="Cup of Joe Screenshot">
                     <h3>Cup of Joe Podcast Website</h3>
                     <p>This is a sample landing page for a podcast called "Cup of Joe"</p>
-                    <div class="technology-tags">
+                    <div class="technology-tags" aria-label="Technologies Used">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                    <a href="https://imadevbro.github.io/cup-of-joe/" target="_blank" class="card-btn">View Project</a>
+                    <a href="https://imadevbro.github.io/cup-of-joe/" target="_blank" class="card-btn" role="button">View Project</a>
                 </div>
                 <div class="project-card">
-                    <img src="./resources/images/cheatsheet-preview.JPG">
+                    <img src="./resources/images/cheatsheet-preview.JPG" alt="Cheat Sheet Screenshot">
                     <h3>HTML & CSS Cheat Sheet</h3>
                     <p>This is a cheat sheet that gives an overview of common HTML/CSS tags and properties</p>
-                    <div class="technology-tags">
+                    <div class="technology-tags" aria-label="Technologies Used">
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
-                    <a href="https://imadevbro.github.io/cheatsheet/" target="_blank" class="card-btn">View Project</a>
+                    <a href="https://imadevbro.github.io/cheatsheet/" target="_blank" class="card-btn" role="button">View Project</a>
                 </div>
                 <div class="project-card">
-                    <img src="./resources/images/brand-guidelines-preview.JPG">
+                    <img src="./resources/images/brand-guidelines-preview.JPG" alt="Brand Guidelines Screenshot">
                     <h3>Elevate - Brand Guidelines</h3>
                     <p>This is a sample style sheet and brand guidelines for Elevate Consulting</p>
-                    <div class="technology-tags">
+                    <div class="technology-tags" aria-label="Technologies Used">
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
-                    <a href="https://imadevbro.github.io/design-system/" target="_blank" class="card-btn">View Project</a>
+                    <a href="https://imadevbro.github.io/design-system/" target="_blank" class="card-btn" role="button">View Project</a>
                 </div>
                 <div class="project-card">
-                    <img src="./resources/images/sodead-preview.JPG">
+                    <img src="./resources/images/sodead-preview.JPG" alt="SoDead Screenshot">
                     <h3>SoDead NFT Project Website</h3>
                     <p>This is a multi-page website created for an NFT project using Webflow</p>
-                    <div class="technology-tags">
+                    <div class="technology-tags" aria-label="Technologies Used">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                         <span>Webflow</span>
                     </div>
-                    <a href="https://www.sodead.xyz/" target="_blank" class="card-btn">View Project</a>
+                    <a href="https://www.sodead.xyz/" target="_blank" class="card-btn" role="button">View Project</a>
                 </div>
                 <div class="project-card">
-                    <img src="./resources/images/number-generator-preview.JPG">
+                    <img src="./resources/images/number-generator-preview.JPG" alt="Number Game Screenshot">
                     <h3>Random Number Guessing Game</h3>
                     <p>This is a simple game that allows you to guess a random number against the computer</p>
-                    <div class="technology-tags">
+                    <div class="technology-tags" aria-label="Technologies Used">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                    <a href="https://imadevbro.github.io/number-guessing-game/" target="_blank" class="card-btn">View Project</a>
+                    <a href="https://imadevbro.github.io/number-guessing-game/" target="_blank" class="card-btn" role="button">View Project</a>
                 </div>
             </div>
         </section>
-        <section class="contact container" id="contact">
+        <!-------------- Contact Form -------------->
+        <section class="contact container reveal" id="contact">
             <h2>Contact Me</h2>
-            <form action="" method="" id="contact-form">
+            <form action="mailto:elevateblockchain@gmail.com" method="post" enctype="text/plain" id="contact-form">
                 <div class="contact-col-1">
                     <h3>Let's Talk!</h3>
                     <p>I'd love to help you with your next project! Send me a message with your contact details and what you are looking to build:</p>
@@ -216,10 +222,10 @@
                     <input type="text" name="full-name" id="full-name" required >
                     <br>
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required >
+                    <input type="email" name="email" id="email" required >
                     <br>
                     <label for="phone">Phone</label>
-                    <input type="text" name="phone" id="phone" required >
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required >
                     <br>
                     <label for="phone">What can I help you with?</label>
                     <textarea rows="5" cols="20"></textarea>
@@ -231,6 +237,7 @@
             </form> 
         </section>
     </main>
+    <!-------------- Footer -------------->
     <footer>
         <small>&copy; Copyright 2023, Joe Berk</small>
         <ul class="social-links">

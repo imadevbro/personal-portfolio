@@ -96,6 +96,8 @@ function particleAnimation() {
 // Call particleAnimation() to start the particle animation
 particleAnimation();
 
+
+// Change tabs in experiences section
 const experiences = document.querySelectorAll("div.experience-tab");
 const experienceButtons = document.querySelectorAll("a.tab-btn, a.tab-btn-active")
 
@@ -109,6 +111,7 @@ const openExperienceTab = (event) => {
 
 experienceButtons.forEach(button => button.addEventListener('click', openExperienceTab));
 
+// Toggle hamburger menu on mobile
 const mobileMenu = document.getElementById('nav-menus');
 const menuIcon = document.getElementById('icon-container');
 
@@ -124,3 +127,24 @@ const toggleMenu = () => {
 };
 
 menuIcon.addEventListener('click', toggleMenu);
+
+//Add fade in elements as the page scrolls
+const reveals = document.querySelectorAll('.reveal')
+
+const reveal = () => {
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
