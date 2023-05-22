@@ -274,6 +274,7 @@ header h2 {
     .banner {
         padding: 0;
         margin: 2rem auto;
+        max-width: 100%;
     }
     .banner h2 {
         margin-bottom: 2rem;
