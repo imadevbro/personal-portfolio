@@ -269,6 +269,14 @@ header h2 {
 @media only screen and (max-width: 500px) {
     .banner .profile-pic {
         width: 60%;
+        height: auto;
+    }
+    .banner {
+        padding: 0;
+        margin: 2rem auto;
+    }
+    .banner h2 {
+        margin-bottom: 2rem;
     }
 }
 
