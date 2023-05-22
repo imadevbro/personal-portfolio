@@ -108,3 +108,19 @@ const openExperienceTab = (event) => {
 }
 
 experienceButtons.forEach(button => button.addEventListener('click', openExperienceTab));
+
+const mobileMenu = document.getElementById('nav-menus');
+const menuIcon = document.getElementById('icon-container');
+
+const toggleMenu = () => {
+    const computedStyle = window.getComputedStyle(mobileMenu);
+    if (computedStyle.display === 'none') {
+        mobileMenu.style.display = 'flex';
+        mobileMenu.style.flexDirection = 'column';
+        mobileMenu.style.alignItems = 'center';
+    } else {
+        mobileMenu.style.display = 'none';
+    }
+};
+
+menuIcon.addEventListener('click', toggleMenu);

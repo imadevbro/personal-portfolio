@@ -60,10 +60,24 @@ p {
     padding: 4rem;
 }
 
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+}
+
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 nav ul {
@@ -86,21 +100,11 @@ nav a {
     padding-top: 0.5rem;
 }
 
-
-@media only screen and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-    nav li {
-        padding: 0.5rem;
-    }
-    .social-links {
-        display: none;
-    }
-}
-
-header h2 {
-    font-family: garetbook;
+#nav-menus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo {
@@ -120,6 +124,63 @@ header h2 {
 
 .social-links li {
     padding: 1rem;
+}
+
+#icon-container {
+    display: none;
+}
+
+
+@media only screen and (max-width: 965px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: flex;
+        align-items: center;
+    } 
+    nav li {
+        padding: 0.5rem;
+    }
+    .social-links {
+        margin-right: 0rem;
+    }
+    #nav-menus {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #icon-container {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+    nav {
+        background-color: black;
+    }
+    #nav-menus {
+        display: none;
+    }
+    .container {
+        padding: 1rem;
+    }
+}
+
+
+header h2 {
+    font-family: garetbook;
 }
 
 .banner-content, .banner img {
@@ -144,11 +205,11 @@ header h2 {
     display: flex;
     padding: 0 5rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .banner .profile-pic {
-    width: 250px;
+    width: 25%;
     height: auto;
     border-radius: 50%;
     border: 1rem solid white;
@@ -156,6 +217,10 @@ header h2 {
 
 .banner h2 {
     margin-bottom: 5rem;
+}
+
+.banner-content {
+    flex-basis: 60%;
 }
 
 .banner-btn {
@@ -183,6 +248,28 @@ header h2 {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+@media only screen and (max-width: 965px) {
+    .banner {
+        margin-top: 2rem;
+        flex-direction: column-reverse;
+    }
+    .banner-btn {
+        padding: 1.5rem 2rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .banner .profile-pic {
+        width: 60%;
+    }
 }
 
 section {
@@ -264,8 +351,8 @@ section h2 {
     }
     .tab-nav {
         flex-direction: row;
-        overflow: scroll;
         margin-bottom: 2rem;
+        flex-wrap: wrap;
     }
     .tab-btn {
         border-top: 1px solid #6b717c;
