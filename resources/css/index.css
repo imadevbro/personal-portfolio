@@ -174,7 +174,7 @@ nav a {
         display: none;
     }
     .container {
-        padding: 1rem;
+        padding: 3rem 1rem;
     }
 }
 
@@ -268,7 +268,7 @@ header h2 {
 
 @media only screen and (max-width: 500px) {
     .banner .profile-pic {
-        width: 60%;
+        width: 200px;
         height: auto;
     }
     .banner {
